@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './App.css';
 import EmployeeCard from './components/EmployeeCard';
 
@@ -22,6 +22,7 @@ function App() {
     fetch("https://randomuser.me/api?nat=en")
       .then((response) => response.json())
       .then((data) => {
+        console.log(data); // Inspecter les données reçues
         const fetchedEmployee = {
           name: {
             first: data.results[0].name.first,
@@ -36,6 +37,7 @@ function App() {
       })
       .catch(error => console.error('Error fetching data:', error));
   };
+  
 
   return (
     <div className='App'>

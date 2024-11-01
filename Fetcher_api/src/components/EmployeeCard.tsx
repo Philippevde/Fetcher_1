@@ -24,16 +24,6 @@ interface EmployeeCardProps {
     );
   }
   
-  const ConfigurationComponent = ({ config }) => {
-    const { key1, key2, key3 } = config;
   
-    return (
-      <div>
-        <p>Key1: {key1}</p>
-        <p>Key2: {key2}</p>
-        <p>Key3: {key3}</p>
-      </div>
-    );
-  };
   
   export default EmployeeCard;
